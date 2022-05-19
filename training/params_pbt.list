@@ -1,0 +1,32 @@
+{
+  "nbr_targets": 8,
+  "nbr_agents": 8,
+  "max_cycles": 1000,
+  "max_target_speed": 1,
+  "max_agent_speed": 2,
+  "map_size": 20,
+  "obs_range": 5,
+  "com_range": 6,
+  "safety_range": 0.5,
+  "dangerous_range": 0.25,
+  "reward": "col_shared",
+  "train_from_backup": false,
+  "train_to_backup": true,
+  "model":{
+    "type": "NN",
+    "use_lstm": false,
+    "fcnet_hiddens": [256, 256, 256],
+    "lstm_cell_size": 16
+  },
+  "clip_param": 0.035730391554732586,
+  "lr": 0.001,
+  "entropy_coeff": 0.044741630546174076,
+  "lambda": 0.5529072942196008,
+  "num_sgd_iter": 90,
+  "sgd_minibatch_size": 9000,
+  "train_batch_size": 37364,
+  "centralized_learning": true,
+  "target_behavior":"random",
+  "num_workers":2,
+  "num_gpus":0
+}

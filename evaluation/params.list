@@ -1,0 +1,14 @@
+{
+  "nbr_targets": 3,
+  "nbr_agents": 2,
+  "max_cycles": 4000,
+  "max_target_speed": 1,
+  "max_agent_speed": 2,
+  "map_size": 25,
+  "obs_range": 5,
+  "com_range": 5,
+  "safety_range": 1,
+  "dangerous_range": 0.5,
+  "centralized_learning": true,
+  "target_behavior": "evasive"
+}

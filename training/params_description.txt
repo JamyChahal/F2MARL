@@ -1,0 +1,21 @@
+{
+  "nbr_targets": 4,
+  "nbr_agents": 4,
+  "max_cycles": 700,
+  "max_target_speed": 2,
+  "max_agent_speed": 2,
+  "map_size": 20,
+  "obs_range": 5,
+  "com_range": 6,
+  "safety_range": 0.5,
+  "reward": "ind", # Or "col", "col_shared"
+  "train_from_backup": false,
+  "train_to_backup": true,
+  "model":{
+    "type": "NN", # Or "LSTM"
+    "fcnet_hiddens": [64, 64],
+    "lstm_cell_size": 16
+  },
+  "centralized_learning": true, #if critic has to be centralized
+  "target_behavior":"evasive" # Or "random"
+}
