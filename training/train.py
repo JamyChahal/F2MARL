@@ -18,7 +18,6 @@ from ray.tune.trial import ExportFormat
 from ray.rllib.agents.registry import get_trainer_class
 from ray.rllib.env import PettingZooEnv
 from ray.tune.registry import register_env
-from behaviors.random_walking_policy import RandomWalkingPolicy
 from training.custom_models.centralizedCriticModel import ObservationCentralizedCriticModel
 
 
@@ -230,9 +229,9 @@ def main(args):
     act_space = test_env.action_space
 
     if params['target_behavior'] == 'random':
-        target_behavior = RandomWalkingPolicy
+        target_behavior = make_randomBehavior
     elif params['target_behavior'] == 'evasive':
-        target_behavior = ReactiveWalkingPolicy
+        target_behavior = make_reactiveBehavior
     else:
         print("ERROR : Target behavior not specified")
         exit()

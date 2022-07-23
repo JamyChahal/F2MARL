@@ -97,7 +97,7 @@ def get_agent_model(method):
     if METHOD.is_trained(method):
         script_dir = os.path.dirname(__file__)
         if method == METHOD.NN_co:
-            model_dir = "/home/jamy/git/obs_randompat_MARL/evaluation/models/model_pbt8"
+            model_dir = "/home/jamy/git/F2MARL/evaluation/models/model_pbt8"
         if method == METHOD.NN_ind:
             model_dir = os.path.join(script_dir + "/models/model_nn")
         model = tf.saved_model.load(model_dir)
@@ -140,7 +140,7 @@ def main(args):
     target_behavior = params["target_behavior"]
     gui = True
     to_backup = False
-    method = METHOD.I_CMOMMT
+    method = METHOD.A_CMOMMT
     max_episodes = 25
 
     if not METHOD.is_implemented(method):
