@@ -1,4 +1,4 @@
-# LSTM_RL
+# F2MARL
 
 main branch
 
